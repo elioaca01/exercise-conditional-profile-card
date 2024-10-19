@@ -38,7 +38,8 @@ function render(variables = {}) {
     instagram,
     role,
     country,
-    city
+    city,
+    socialMediaPosition
   } = variables;
   // reset the website body with the new html output
   document.querySelector(
@@ -52,7 +53,7 @@ function render(variables = {}) {
           <h3>${city == null ? "City" : city}, ${
     country == null ? "Country" : country
   }</h3>
-          <ul class="position-right">
+          <ul class=${socialMediaPosition}>
             <li><a href="https://twitter.com/${twitter}"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/${github}"><i class="fab fa-github"></i></a></li>
             <li><a href="https://linkedin.com/school/${linkedin}"><i class="fab fa-linkedin"></i></a></li>
